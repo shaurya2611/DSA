@@ -57,7 +57,7 @@ int knapsacktopdown(int weight[], int value[], int maxWeight, int size){
     //from the recursion eqautions
     for (int i = 1; i <size+1; i++){
         for(int j = 1; j < maxWeight+1; j++){
-            if(weight[i-1]<= maxWeight){
+            if(weight[i-1]<= j){
                 t[i][j] = max(value[i-1] + t[i-1][j-weight[i-1]]  , t[i-1][j]);
             }
             else
